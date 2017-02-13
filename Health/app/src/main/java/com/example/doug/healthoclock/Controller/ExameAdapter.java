@@ -51,19 +51,25 @@ public class ExameAdapter extends BaseAdapter {
 
         ControleExame exame = lista.get(position);
 
-        if(position % 2 == 0)
+       /* if(position % 2 == 0)
         {
             view.setBackgroundColor(activity.getResources().getColor(R.color.linha_par));
         }
         else{
             view.setBackgroundColor(activity.getResources().getColor(R.color.linha_impar));
-        }
+        }*/
 
         TextView nome = (TextView) view.findViewById(R.id.itemNome);
         nome.setText(exame.getTipoExame());
 
-        ImageView imagem = (ImageView) view.findViewById(R.id.itemFoto);
-        imagem.setImageResource(R.drawable.exames_button);
+//        ImageView imagem = (ImageView) view.findViewById(R.id.itemFoto);
+//        imagem.setImageResource(R.drawable.tipo_exame);
+//
+//        TextView unidade = (TextView) view.findViewById(R.id.inputUnidade);
+//        unidade.setText(exame.getNomeUnidadeMedica());
+//
+//        ImageView imagemU = (ImageView) view.findViewById(R.id.img_unidade);
+//        imagemU.setImageResource(R.drawable.ic_casa);
 //        if (convertView == null){
 //            LayoutInflater li = (LayoutInflater) this.context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
 //            convertView = li.inflate(R.layout.exame_layout, null);

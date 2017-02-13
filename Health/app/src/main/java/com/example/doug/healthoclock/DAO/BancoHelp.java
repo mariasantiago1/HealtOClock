@@ -28,8 +28,8 @@ public class BancoHelp extends SQLiteOpenHelper{
 
     @Override
     public void onCreate(SQLiteDatabase banco) {
-        //banco.execSQL(script_schema);
-        //banco.execSQL(script_dados);
+//        banco.execSQL(script_schema);
+//        banco.execSQL(script_dados);
         banco.execSQL(
             "CREATE TABLE IF NOT EXISTS ControleExame (" +
                 "`id`	INTEGER PRIMARY KEY AUTOINCREMENT," +

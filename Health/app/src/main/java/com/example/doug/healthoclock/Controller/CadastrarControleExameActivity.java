@@ -5,6 +5,7 @@ import android.app.SearchManager;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
@@ -12,11 +13,14 @@ import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.EditText;
+import android.widget.TextView;
 
 import com.example.doug.healthoclock.DAO.ControleExameDAO;
 import com.example.doug.healthoclock.R;
 import com.example.doug.healthoclock.model.ControleExame;
 import com.example.doug.healthoclock.model.Paciente;
+
+import java.util.Calendar;
 
 public class CadastrarControleExameActivity extends AppCompatActivity {
     private ControleExameDAO dao;
@@ -29,7 +33,8 @@ public class CadastrarControleExameActivity extends AppCompatActivity {
     private EditText material;
     private EditText exame;
     private DatePicker data;
-    private Button botaoCadastro;
+
+    private FloatingActionButton botaoCadastro;
 
 
     @Override
@@ -46,11 +51,14 @@ public class CadastrarControleExameActivity extends AppCompatActivity {
         this.especialidade = (EditText) findViewById(R.id.inputEspecialidade);
         this.material = (EditText) findViewById(R.id.inputMaterial);
         this.exame = (EditText) findViewById(R.id.inputExame);
-        this.data = (DatePicker) findViewById(R.id.inputDate);
+        this.data = (DatePicker) findViewById(R.id.inputData);
+
         this.data.setCalendarViewShown(true);
 
-        this.botaoCadastro = (Button) findViewById(R.id.buttonCadastrar);
-        this.botaoCadastro.setOnClickListener(new cadastrar());
+       this.botaoCadastro = (FloatingActionButton) findViewById(R.id.btnAdd);
+       this.botaoCadastro.setOnClickListener(new cadastrar());
+
+
     }
 
     private class cadastrar implements View.OnClickListener{

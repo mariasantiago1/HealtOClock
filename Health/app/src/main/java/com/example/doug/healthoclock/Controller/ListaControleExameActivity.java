@@ -36,6 +36,15 @@ public class ListaControleExameActivity extends AppCompatActivity {
         btnAdd.setOnClickListener(new ListaControleExameActivity.AddExame());
     }
 
+    @Override
+    public void onResume() {
+        super.onResume();
+
+        exames = dao.getControleExames();
+        ExameAdapter adapter = new ExameAdapter(this, exames);
+        listView.setAdapter(adapter);
+    }
+
     private class AddExame implements View.OnClickListener{
         @Override
         public void onClick(View v) {
